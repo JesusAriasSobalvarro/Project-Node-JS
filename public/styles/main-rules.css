@@ -1,0 +1,71 @@
+
+/* 
+	Reglas para estrucuturar el sidebar y el contenedor principal 
+	donde se ubica el contenido general. 
+ */
+.sidenav {
+    height: auto;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #EAEDED;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 16px;
+}
+
+.sidenav a { 
+    text-decoration: none;
+    font-size: 12pt;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #2471A3;
+}
+
+.sidenav .closebtn {   
+    font-size: 15pt; 
+    color: #000;
+    padding-right: 25px;
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding-top: 16px;
+    margin-left: 250px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+  	padding-top: 15px; 
+
+  }
+  .sidenav a {font-size: 18px;}
+}
+
+/* 
+	Reglas para el pie de pagina
+ */
+
+ 
+.footer-section{  
+	padding-top: 30px;
+	padding-bottom: 50px;
+	background-color: #1C2833;
+}
+
+.footer-caption{
+	margin:10px auto;
+	color: white;
+}
+
+.footer-caption a{
+	color: #fff;
+	text-decoration: none;
+	margin:15px;
+}

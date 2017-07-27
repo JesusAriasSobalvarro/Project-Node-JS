@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Registro de productos </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../ProyectoDesarrolloWebUnah/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../ProyectoDesarrolloWebUnah/css/catalogo_electronico.css">
+  <link rel="stylesheet" type="text/css" href="css/catalogo-style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+</head>
+<body>
+ <nav id="menu" class="navbar navbar-default navbar-fixed-top navbar-inverse ">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#small-menu" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img alt="Brand" src="img/carry2.png" height="30px"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="small-menu">
+           
+          <form class="navbar-form navbar-left">
+            <div></div>
+            <div class="form-group"> 
+              
+                <div class="input-group"> 
+                <span class="input-group-btn">
+                  <select class="form-control">
+                    <option>Seleccione una</option>
+                    <option>Restaurantes</option>
+                  </select>
+                </span>        
+                <input type="text" class="form-control" size="35"  placeholder="¿Buscando algo?">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div><!-- /input-group -->
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="hidden" href="#">Acceder</a></li> 
+            <li><a class="hidden" href="#">Registrame</a></li>
+            <li><a href="carrito_ordenes.html"><span class="fa fa-shopping-basket" aria-hidden="true"></span>&nbsp;0</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="fa fa-user-circle" aria-hidden="true"></span>
+                  Nombre_Usuario <span class="caret" aria-hidden="true"></span>
+                </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" >Mi cuenta</a></li> 
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Cerrar sesión</a></li>
+                  </ul>
+            </li>            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+      <div class="container text-center">
+      <div class="page-header">
+          <h1>
+              <i class="glyphicon glyphicon-gift"></i> Registro de producto
+             
+          </h1>
+      </div>
+      </div>
+
+      <form class="form-horizontal" method="GET">
+          <div class="form-group">
+              <label class="control-label col-sm-4" >Nombre del producto:</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="txt-titulo" placeholder="Ingrese el nombre del producto" name="nombreProducto">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" >Descripcion de la oferta</label>
+              <div class="col-sm-5">          
+               <textarea rows="2"  class="form-control" name="descripcion"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" >Categoria del Producto </label>
+              <div class="col-sm-2">          
+                <select class="form-control" name="tipoProducto" >
+                  <option value="" selected disabled="">Tipo de producto</option>
+                  <option value="1">Categoria1</option>
+                  <option value="2">Categoria2</option>
+                  <option value="3">Categoria3</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" >Estado del producto</label>
+              <div class="col-sm-2">          
+                <select class="form-control" name="tipoProducto" >
+                  <option value="" selected disabled=""></option>
+                  <option value="1">Estado1</option>
+                  <option value="2">Estado2</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" >Precio del producto</label>              
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="txt-precio" name="precio" placeholder="00.00">
+              </div>
+              <label class="control-label col-sm-1" >Lempiras</label>       
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" >Unidades disponibles</label>
+              <div class="col-sm-2">          
+               <input type="text" class="form-control" id="txt-cantidad"  name="cantidadProducto" placeholder="0">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4" >Agregar imagen</label>
+              <div class="col-sm-1">          
+               <button type="btn" class="btn btn-success" id="btn-agregarImagen" onclick=""><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span></button>
+               <button type="btn" class="btn btn-danger" id="btn-removerImagen" onclick=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+              </div>
+              <div class="col-sm-2">
+                <select class="form-control" name="selecionarImagen" size="8" >
+                  <option value="1">Nombre imagen 1</option>
+                  <option value="2">Nombre imagen 2</option>
+                  <option value="3">Nombre imagen 3</option>
+                </select>
+               
+              </div>
+              <div class="col-sm-2 " >
+              <img src="img/default-thumbnail.png" class="img-responsive" alt="Cinque Terre">
+
+              </div>
+
+            </div>
+
+              <div class="btnCentrado">          
+                  <input type="submit" class="btn btn-success"  value="Guardar Registro" id="btn-guardarRegistro">
+                  <a class="btn btn-danger" id="btn-cancelarRegistro" href="index.html">Cancelar Registro</a>
+              </div>
+          
+
+      </form>
+
+
+
+
+</body>
+
+
+
+</html>

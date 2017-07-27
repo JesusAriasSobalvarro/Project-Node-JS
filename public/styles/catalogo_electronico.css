@@ -1,0 +1,105 @@
+body {
+  padding-top: 60px;
+  
+}
+
+.navbar {
+  margin-bottom: 40px;
+}
+
+.btnCentrado{
+	text-align: center;
+	padding-top: 40px;
+	
+}
+
+.cuadro-imagen{
+	width: 200px;
+	height: 200px;
+	border-width: 2px;
+	border-color: #00FF00;
+
+}
+
+
+.table-responsive{
+	 width: 100%;
+	 text-align: center;
+	 padding-left: 10%;
+	 padding-right: 10%;
+	
+
+
+}
+.icon-ok{
+	
+	color: #FFF;
+	background-color: #73CE57;
+	width: 30px;
+	height: 25px;
+	padding:5px;
+}
+
+.icon-no-ok{
+	
+	color: #FFF;
+	background-color: #F42929;
+	width: 30px;
+	height: 25px;
+	padding:5px;
+}
+
+#tbl-total{
+	width: 30%;
+
+}
+#div-tbl-total{
+	text-align: -webkit-right;
+}
+
+.selected img {
+	opacity:0.5;
+}
+
+#contenedor{
+	padding-top: 30px;
+}
+
+#slider-thumbs{
+	padding-top: 20px;
+
+
+}
+
+
+/*allan*/
+
+.slider-img{
+	max-height: 480px;
+}
+
+.slider-img-small{
+	height: 60px; 
+	width: 80px;
+}
+
+.detail-article-title{
+	padding-bottom: 5px;  
+	font-family: 'Roboto Light';
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.detail-article-description{
+	padding-top: 7px;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+.detail-article-price{
+	padding-bottom: 5px; 
+
+	font-family: 'Roboto Light';
+	font-size: 16pt;
+	font-weight: bold;
+ }
