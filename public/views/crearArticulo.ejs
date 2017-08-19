@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <% include partials/head.ejs %>
@@ -21,14 +22,25 @@
 
                 <div class="box-body">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                       <!--Contenido-->
 
-                      <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                          <h3>Datos de la empresa</h3>
-                        </div>
-                      </div>
+                      <h3>Nuevo Articulo</h3>
+
+                        <form action="/articulos/crearArticulo" method="POST">
+                          <div class="form-group">
+                            <label for="nombre">Descripción</label>
+                            <input type="text" name="descripcion" class="form-control" placeholder="Nombre...">
+                          </div>
+                          <div class="form-group">
+                            <label for="descripcion">Precio</label>
+                            <input type="text" name="precio" class="form-control" placeholder="Descripción...">
+                          </div>
+                          <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Guardar</button>
+                            <button class="btn btn-danger" type="reset">Cancelar</button>
+                          </div>
+                        </form>
 
                       <!-- Fin Contenido-->
                     </div>
@@ -42,12 +54,10 @@
       <% include partials/footer %>
     </div>
     <!-- jQuery 2.1.4 -->
-    <script src="../../scripts/jQuery-2.1.4.min.js"></script>
+    <script src="/public/scripts/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="../../scripts/bootstrap.min.js"></script>
+    <script src="/public/scripts/bootstrap.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="../../scripts/app.min.js"></script>
-    <!-- jQuery custom script -->
-    <script src="../../scripts/custom.js"></script>
+    <script src="/public/scripts/app.min.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ var db = new sqlite3.Database('sistema_pedido.db');
 
 //View Engine
 app.set('view engine','ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public/views'));
 
 //Static Directory
 app.use(express.static(__dirname));
