@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3');
 var expressValidator = require('express-validator');
 
-var index = require('/routes/index');
+var index = require('routes/index');
 
 
 var app = express();
