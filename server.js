@@ -3,21 +3,28 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var sqlite3 = require('sqlite3');
 var expressValidator = require('express-validator');
+
+var index = require('/routes/index');
+
+
 var app = express();
 var db = new sqlite3.Database('sistema_pedido.db');
 
 //View Engine
 app.set('view engine','ejs');
-app.set('views', path.join(__dirname, 'public/views'));
+app.set('views', path.join(__dirname, 'views'));
 
 //Static Directory
 app.use(express.static(__dirname));
 
 //Listener
-app.listen(process.env.PORT || 3000, function(){
+/*app.listen(, function(){
     console.log('Server started on Port 3000');
 });
+*/
 
+
+app.use('/', index);
 
 //Body Parser Middleware
 app.use(bodyParser.json());
@@ -47,10 +54,53 @@ app.use(expressValidator({
   }
 }));
 
-//Routes
-app.get('/', function(request, response){
-  response.render('index');
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
+
+// error handlers
+
+
+
+
+// development error handler
+// will print stacktrace
+if (app.get('env') === 'development') {
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,
+      error: err
+    });
+  });
+}
+
+
+
+
+// production error handler
+// no stacktraces leaked to user
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
+module.exports = app;
+
+
+
+
+
+
+
+/*
 
 app.get('/articulos', function(request, response) {
     db.all("SELECT * FROM tbl_articulo", function(err, rows) {
@@ -61,7 +111,8 @@ app.get('/articulos', function(request, response) {
         });
     });
 });
-
+*/
+/*
 app.get('/articulos/crearArticulo', function(request, response) {
   response.render('crearArticulo');
 });
@@ -135,4 +186,4 @@ app.get('/clientes', function(request, response) {
 app.get('/pedidos', function(request, response) {
   response.render('pedido');
 });
-
+*/
